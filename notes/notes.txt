@@ -1,0 +1,34 @@
+Test Block all the test should follow the following structure:
+  1. Render the Component we test
+  2. Find the element we want to interact with
+  3. Interact with those elements
+  4. Assert the result
+
+
+Screen selector attribute
+  cf. screen_selector
+
+Screen selector method
+  screen.getBy[Method]
+  pour choisir la mthode a uitiliser lobjectif est de ce rapporcher le plus possible
+  de la facon dont lutilisateur va acceder au composant de facon general
+  la herachie ce construit de cette facon 
+  cf. screen_method
+
+Screen Selector 
+  -getByRole: 
+    screen.getByRole("heading", { name: "MY HEADER" }): selection le header contenant
+      le test "My header"
+
+  -getByTitle
+    screen.getByTitle("Header"): selectionne l'element HTML de titre title
+    ce selecteur est un selecteur de bas nieveau specific car il nécesssite
+    d'ajouteer a l'element HTML un attribut title
+            <h3 title="Header" className="header">
+
+  -getByTestId
+    screen.getByTestId("header-2"): selection l'element HTML de testid "header-2"
+    ce selecteur est le plus bas niveau (a evité donc) il necessite de specifier
+    un attribut testid sur l'element HTML
+            <h3 title="Header" data-testid="header-2" className="header">
+
