@@ -5,9 +5,9 @@ export default function Header({ title }) {
   return (
     <>
       <h1 className="header">{title}</h1>
-      <h3 title="Header" data-testid="header-2" className="header">
+      {/* <h3 title="Header" data-testid="header-2" className="header">
         Cats
-      </h3>
+      </h3> */}
     </>
   );
 }
