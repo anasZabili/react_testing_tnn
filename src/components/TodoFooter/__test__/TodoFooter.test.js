@@ -10,16 +10,18 @@ const MockTodoFooter = ({ numberOfIncompleteTasks }) => {
   );
 };
 
-it("should render the correct amount of incomplete tasks", () => {
-  render(<MockTodoFooter numberOfIncompleteTasks={3} />);
-  const paragraphElement = screen.getByText("3 tasks left");
-  expect(paragraphElement).toBeInTheDocument();
-});
+describe("TodoFooter", () => {
+  it("should render the correct amount of incomplete tasks", () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={3} />);
+    const paragraphElement = screen.getByText("3 tasks left");
+    expect(paragraphElement).toBeInTheDocument();
+  });
 
-it('should render "task" singular when the number of incomplete tasks is one', () => {
-  render(<MockTodoFooter numberOfIncompleteTasks={1} />);
-  const paragraphElement = screen.getByText("1 task left");
-  expect(paragraphElement).toBeInTheDocument();
+  it('should render "task" singular when the number of incomplete tasks is one', () => {
+    render(<MockTodoFooter numberOfIncompleteTasks={1} />);
+    const paragraphElement = screen.getByText("1 task left");
+    expect(paragraphElement).toBeInTheDocument();
+  });
 });
 
 // it('should render "task" singular when the number of incomplete tasks is one', () => {
