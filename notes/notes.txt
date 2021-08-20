@@ -32,3 +32,24 @@ Screen Selector
     un attribut testid sur l'element HTML
             <h3 title="Header" data-testid="header-2" className="header">
 
+Mocked Function
+  If we need a dummy function for our unit test (for exemple a setter to passed 
+    to a child component) jest provide a way to easily create a mocked function
+      const mockedSetTodo = jest.fn();
+
+
+FireEvent
+  To interact with our component (like input)
+  we need a way to simulate event on it thats were the fireEvent obj come in place
+  fireEvent allow us to simulate event on our element during the testing phase 
+
+  Fire Typing Event on an TextInput
+
+    fireEvent.change(inputElement, {
+      target: { value: "Go Grocery Shopping" },
+    });
+
+  Fire Click event
+    fireEvent.click(addButtonElement);
+
+

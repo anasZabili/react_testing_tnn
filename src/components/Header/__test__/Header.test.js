@@ -1,12 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import Header from "../Header";
 
-// GET BY
+describe("Header", () => {
+  // GET BY
 
-it("should render same text passed into title props", () => {
-  render(<Header title="MY HEADER" />);
-  const headerElement = screen.getByText(/my header/i);
-  expect(headerElement).toBeInTheDocument();
+  it("should render same text passed into title props", () => {
+    render(<Header title="MY HEADER" />);
+    const headerElement = screen.getByText(/my header/i);
+    expect(headerElement).toBeInTheDocument();
+  });
 });
 
 // it("should had a heading role", () => {
