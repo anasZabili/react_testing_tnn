@@ -53,3 +53,7 @@ FireEvent
     fireEvent.click(addButtonElement);
 
 
+  Check the class of an element
+    expect(addedTodoDivElement).toHaveClass("todo-item-active");
+
+
