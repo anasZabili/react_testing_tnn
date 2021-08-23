@@ -57,3 +57,24 @@ FireEvent
     expect(addedTodoDivElement).toHaveClass("todo-item-active");
 
 
+  How to mock api request
+    when a component make a request to an external API the best approach is to
+    mock this request instead of actually doing it to do That:
+
+      1. Create a __mocks__ folder inside the source directory  
+      2. Create a file inside of this directory name by the entity that we want
+        to mock (ex if its an axios request name the file axios.js)
+      3. Return the object for the request
+      4. Fix the reset mock problem, by default react reset all the mock
+        because of that the data that we recived will be empty, so we need to
+        desable this behavior, 
+        "jest": {
+          "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}"
+          ],
+          "resetMocks": false
+        }
+        in package.json
+
+  Log the screen element
+    screen.debug() log the html screen

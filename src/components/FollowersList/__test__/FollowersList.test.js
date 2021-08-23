@@ -14,12 +14,13 @@ describe("FollowersList", () => {
   it("should render at least one card", async () => {
     render(<MockedFollowersList />);
     const followerDivElement = await screen.findByTestId("follower-item-0");
+    // screen.debug();
     expect(followerDivElement).toBeInTheDocument();
   });
 
-  it("should render at least five card", async () => {
-    render(<MockedFollowersList />);
-    const followerDivElement = await screen.findAllByTestId(/follower-item/i);
-    expect(followerDivElement.length).toBe(5);
-  });
+  // it("should render at least five card", async () => {
+  //   render(<MockedFollowersList />);
+  //   const followerDivElement = await screen.findAllByTestId(/follower-item/i);
+  //   expect(followerDivElement.length).toBe(5);
+  // });
 });
